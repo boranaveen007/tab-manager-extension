@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Manager</title>
+    <link href="../output.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-900 dark:bg-gray-900 text-gray-900 dark:text-white p-4">
+
+    <div class="w-80 bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-6 border border-gray-300 dark:border-gray-700">
+        <!-- Title -->
+        <h2 class="text-xl font-bold text-center mb-4 dark:text-white">Tab Manager</h2>
+
+        <!-- Search Tabs -->
+        <div class="relative mt-4 mb-4">
+            <input 
+                type="search"
+                id="tab-search" 
+                placeholder="Search open tabs..." 
+                class="w-full p-2 border border-gray-500 text-black bg-white dark:text-white dark:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
+            >
+            <!-- <button id="clear-search" class="absolute right-3 top-2 text-gray-500 hover:text-red-500">
+                ✖
+            </button> -->
+            <ul id="search-results" class="mt-2 max-h-32 overflow-y-auto border border-gray-400 dark:border-gray-700 rounded-md bg-gray-200 dark:bg-gray-700 p-2 hidden"></ul>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="grid grid-cols-2 gap-3">
+            <button id="group-tabs" class="btn bg-orange-500 hover:bg-orange-600">Group Tabs</button>
+            <button id="close-tabs" class="btn bg-red-500 hover:bg-red-600">Close Tabs</button>
+            <button id="save-session" class="btn bg-yellow-500 hover:bg-yellow-600">Save Session</button>
+            <button id="restore-session" class="btn bg-green-500 hover:bg-green-600">Restore Session</button>
+            <button id="close-duplicate-tabs" class="btn bg-orange-400 hover:bg-orange-500">Remove Duplicates</button>
+            <button id="suspend-tabs" class="btn bg-purple-500 hover:bg-purple-600">Suspend Inactive</button>
+            <button id="toggle-pin-tabs" class="btn bg-blue-500 hover:bg-blue-600">Pin/Unpin Tabs</button>
+            <button id="toggle-mute" class="btn bg-red-400 hover:bg-red-500">Mute All Tabs</button>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <button id="toggle-dark-mode" class="w-full mt-4 py-2 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-md transition">
+            Toggle Dark Mode
+        </button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
